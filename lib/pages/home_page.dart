@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:orion_ai/services/chat_web_service.dart';
 import 'package:orion_ai/widgets/search_section.dart';
 import 'package:orion_ai/widgets/side_bar.dart';
 
 import '../theme/colors.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String fullResponse = "";
+  @override
+  void initState() {
+    ChatWebService().connect();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +83,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        //footer
       ],
     ));
   }
