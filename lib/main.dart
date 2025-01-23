@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:orion_ai/pages/chat_page.dart';
+
 import 'package:orion_ai/pages/home_page.dart';
 import 'package:orion_ai/theme/colors.dart';
 
